@@ -2,7 +2,7 @@ A basic CHIP8 emulator for learning purposes.
 
 ## Demo
 
-[Video Demo](demo.mp4)
+<video src="demo.mp4" controls></video>
 
 ## Dependencies
 
