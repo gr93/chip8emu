@@ -12,7 +12,7 @@
 #define SHIFT_USES_VY 1
 #define TARGET_FPS 60
 #define FRAME_DELAY (1000 / TARGET_FPS)
-#define CYCLES_PER_FRAME 1000
+#define CYCLES_PER_FRAME 10
 
 void clear_arr(unsigned char screen[RESOLUTION_WIDTH][RESOLUTION_HEIGHT]) {
     for(int i = 0; i < RESOLUTION_WIDTH; i++) {
@@ -134,7 +134,7 @@ int main(int  argc, char * const  argv[]) {
     SDL_StartTextInput();
 
     // Load ROM
-    FILE * f = fopen("roms/mario.ch8", "rb");
+    FILE * f = fopen("roms/Tetris [Fran Dachille, 1991].ch8", "rb");
     unsigned char screen[RESOLUTION_WIDTH][RESOLUTION_HEIGHT]; 
     struct registers regs = {0}; // Initialize all registers to 0
 
@@ -172,6 +172,7 @@ int main(int  argc, char * const  argv[]) {
     int waiting_for_key_reg = -1;
     
     while (run) {
+      //This while loop runs 1 iteration per frame
       Uint32 frame_start = SDL_GetTicks();
       
       //Decrement delay timer if needed

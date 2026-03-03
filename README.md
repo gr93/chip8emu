@@ -1,6 +1,10 @@
 A basic CHIP8 emulator for learning purposes.
 
-Deps:
+## Demo
+
+[Video Demo](demo.mp4)
+
+## Dependencies
 
 - MSVC Compiler w/ cl.exe in PATH
 
