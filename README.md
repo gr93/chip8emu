@@ -12,4 +12,4 @@ https://github.com/user-attachments/assets/237b4cec-f453-4e12-8774-f682e84d493e
 
 Tested on x86-64 Windows 10:
 
-```cl main.c /I include /link SDL2.lib && main```
+```cl main.c stack.c /I include /link lib/x64/SDL2.lib && main```
